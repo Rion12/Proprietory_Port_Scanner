@@ -14,9 +14,9 @@ for i in range(0,256):
     port1 = 80
     port2 = 443
     i = str(i)
-    ip_sanmar = Ip_offset + i
+    ip_midwr = Ip_offset + i
 
-    host_ip = ip_sanmar
+    host_ip = ip_midwr
     
     # connecting to the server
     try:
@@ -28,11 +28,11 @@ for i in range(0,256):
 
     except TimeoutError:
 
-        print(f"there was an error connecting to port 80 for {ip_sanmar}")
+        print(f"there was an error connecting to port 80 for {host_ip}")
 
     except ConnectionRefusedError:
 
-        print(f"{ip_sanmar} refuted the connection actively")
+        print(f"{host_ip} refuted the connection actively")
 
     except OSError:
 
@@ -45,11 +45,11 @@ for i in range(0,256):
         print(f" Connected successfully with {host_ip} at port 443")
     except TimeoutError:
 
-        print(f"there was an error connecting to port 443 for {ip_sanmar}")
+        print(f"there was an error connecting to port 443 for {host_ip}")
 
     except ConnectionRefusedError:
 
-        print(f"{ip_sanmar} refuted the connection actively")
+        print(f"{host_ip} refuted the connection actively")
 
     except OSError:
 
